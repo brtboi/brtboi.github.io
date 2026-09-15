@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { navSections } from '../content'
+import styles from './SideNav.module.scss'
 
 export default function SideNav() {
   const [active, setActive] = useState('home')
@@ -24,16 +25,16 @@ export default function SideNav() {
   }, [])
 
   return (
-    <nav className="side-nav" aria-label="Section navigation">
+    <nav className={styles.sideNav} aria-label="Section navigation">
       <ul>
         {navSections.map((section) => (
           <li key={section.id}>
             <a
               href={`#${section.id}`}
-              className={active === section.id ? 'is-active' : ''}
+              className={active === section.id ? styles.isActive : ''}
             >
-              <span className="dot" />
-              <span className="label">{section.label}</span>
+              <span className={styles.dot} />
+              <span className={styles.label}>{section.label}</span>
             </a>
           </li>
         ))}

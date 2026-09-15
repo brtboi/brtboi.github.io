@@ -1,0 +1,103 @@
+.sideNav {
+  position: fixed;
+  top: 50%;
+  // hugs the left edge of the centered hero/content column, with a fixed gap,
+  // instead of sitting pinned far off at the viewport edge on wide screens
+  left: calc(50% - 32.75rem);
+  width: 7rem;
+  transform: translateY(-50%);
+  z-index: 50;
+  opacity: 0.35;
+  transition: opacity 0.3s ease, left 0.2s ease;
+}
+
+@media (max-width: 1149px) {
+  .sideNav {
+    left: 0.75rem;
+    width: auto;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .sideNav a {
+    justify-content: flex-start;
+  }
+}
+
+.sideNav:hover,
+.sideNav:focus-within {
+  opacity: 1;
+}
+
+.sideNav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.sideNav a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  justify-content: flex-end;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: background 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.label {
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.sideNav a:hover,
+.sideNav a.isActive {
+  color: var(--text);
+}
+
+.sideNav a:hover .dot,
+.sideNav a.isActive .dot {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+@media (max-width: 640px) {
+  .sideNav {
+    top: auto;
+    bottom: 1.1rem;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+
+  .sideNav ul {
+    flex-direction: row;
+    gap: 1.4rem;
+    background: var(--bg-alt);
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+  }
+
+  .label {
+    display: none;
+  }
+
+  .sideNav a {
+    justify-content: center;
+  }
+}

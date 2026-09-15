@@ -1,0 +1,52 @@
+.contact {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.contactBlurb {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  max-width: 30rem;
+  margin: 0 auto 1.75rem;
+  line-height: 1.6;
+}
+
+.contactEmail {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.2rem;
+  margin-bottom: 1.75rem;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+
+  a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--text);
+    }
+  }
+}
+
+.contactFooter {
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}

@@ -3,13 +3,13 @@ import Hero from './components/Hero'
 import Timeline from './components/Timeline'
 import Contact from './components/Contact'
 import { education, experience, projects } from './content'
-import './App.css'
+import styles from './App.module.scss'
 
 function App() {
   return (
     <>
       <SideNav />
-      <main>
+      <main className={styles.main}>
         <Hero />
         <Timeline id="education" title="Education" items={education} />
         <Timeline id="experience" title="Experience" items={experience} />

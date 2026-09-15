@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { useReveal } from '../hooks/useReveal'
+import styles from './Reveal.module.scss'
 
 export default function Reveal({
   children,
@@ -15,7 +16,7 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${visible ? 'reveal-visible' : ''} ${className}`}
+      className={`${styles.reveal} ${visible ? styles.revealVisible : ''} ${className}`}
       style={{ transitionDelay: visible ? `${delay}ms` : '0ms' }}
     >
       {children}
