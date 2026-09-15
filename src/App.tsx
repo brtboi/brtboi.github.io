@@ -7,7 +7,7 @@ import styles from './App.module.scss'
 
 function App() {
   return (
-    <>
+    <div className={styles.bigDiv}>
       <SideNav />
       <main className={styles.main}>
         <Hero />
@@ -16,7 +16,7 @@ function App() {
         <Timeline id="projects" title="Projects" items={projects} />
         <Contact />
       </main>
-    </>
+    </div>
   )
 }
 
