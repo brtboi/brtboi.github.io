@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { contact } from '../content'
 import styles from './Intro.module.scss'
 
@@ -25,7 +26,7 @@ export default function Intro() {
             href={contact.resumeHref}
             target="_blank"
             rel="noreferrer"
-            className={`${styles.pill} ${styles.pillAccent}`}
+            className={clsx(styles.pill, styles.pillAccent)}
           >
             Resume
           </a>

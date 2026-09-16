@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import clsx from 'clsx'
 import { navSections } from '../content'
 import styles from './SideNav.module.scss'
 
@@ -31,7 +32,7 @@ export default function SideNav() {
           <li key={section.id}>
             <a
               href={`#${section.id}`}
-              className={active === section.id ? styles.isActive : ''}
+              className={clsx(active === section.id && styles.isActive)}
             >
               <span className={styles.dot} />
               <span className={styles.label}>{section.label}</span>
