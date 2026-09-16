@@ -1,10 +1,10 @@
 import { contact } from '../content'
-import styles from './Hero.module.scss'
+import styles from './Intro.module.scss'
 
-export default function Hero() {
+export default function Intro() {
   return (
-    <section id="home" className={styles.hero}>
-      <div className={styles.heroInner}>
+    <section id="me" className={styles.introDiv}>
+      <div className={styles.introInner}>
         <p className={styles.heroKicker}>Hi, I'm</p>
         <h1 className={styles.heroName}>Brent Hu</h1>
         <p className={styles.heroTagline}>
@@ -31,9 +31,10 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <a href="#education" className={styles.scrollHint} aria-label="Scroll to content">
-        <span />
-      </a>
+
+      <div className={styles.introArrow}>
+        <p>to main content</p>
+      </div>
     </section>
   )
 }

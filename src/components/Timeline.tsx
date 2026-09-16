@@ -1,5 +1,4 @@
 import Reveal from './Reveal'
-import shared from '../styles/shared.module.scss'
 import styles from './Timeline.module.scss'
 
 type TimelineEntry = {
@@ -20,9 +19,9 @@ export default function Timeline({
   items: TimelineEntry[]
 }) {
   return (
-    <section id={id} className={shared.section}>
+    <section id={id}>
       <Reveal>
-        <h2 className={shared.sectionTitle}>{title}</h2>
+        <h2>{title}</h2>
       </Reveal>
 
       <ol className={styles.timeline}>

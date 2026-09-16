@@ -27,6 +27,13 @@
 * {
   box-sizing: border-box;
   font-size: inherit;
+
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  
+  text-decoration: none;
+  color: inherit;
 }
 
 html {
@@ -46,24 +53,14 @@ html {
 }
 
 body {
-  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 500;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }

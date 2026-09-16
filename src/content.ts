@@ -26,7 +26,7 @@ export const education = [
 
 export const experience = [
   {
-    period: 'May 2026 – Present',
+    period: 'May 2026 - Present',
     title: 'AI Researcher',
     org: 'Qernelzoo & Batista Lab',
     description:
@@ -34,7 +34,7 @@ export const experience = [
     tags: ['Hugging Face Transformers', 'RAG', 'SLURM'],
   },
   {
-    period: 'Sep 2025 – Present',
+    period: 'Sep 2025 - Present',
     title: 'Full-Stack Developer',
     org: 'Yale Computer Society — CourseTable',
     description:
@@ -42,7 +42,7 @@ export const experience = [
     tags: ['PostgreSQL', 'Async', 'Web Scraping'],
   },
   {
-    period: 'Sep 2025 – Present',
+    period: 'Sep 2025 - Present',
     title: 'Controls Software Developer',
     org: 'Yale Undergraduate Aerospace Association — Jet Team',
     description:
@@ -50,7 +50,7 @@ export const experience = [
     tags: ['Embedded Systems', 'Telemetry'],
   },
   {
-    period: 'May 2024 – Sep 2024',
+    period: 'May 2024 - Sep 2024',
     title: 'AI Research Assistant',
     org: 'University of Puget Sound',
     description:
@@ -87,7 +87,7 @@ export const projects = [
 ]
 
 export const navSections = [
-  { id: 'home', label: 'Home' },
+  { id: 'me', label: 'Me' },
   { id: 'education', label: 'Education' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },

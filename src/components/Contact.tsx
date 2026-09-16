@@ -1,13 +1,13 @@
 import { contact } from '../content'
 import Reveal from './Reveal'
-import shared from '../styles/shared.module.scss'
+// import shared from '../styles/shared.module.scss'
 import styles from './Contact.module.scss'
 
 export default function Contact() {
   return (
-    <footer id="contact" className={`${shared.section} ${styles.contact}`}>
+    <footer id="contact" className={styles.contact}>
       <Reveal>
-        <h2 className={shared.sectionTitle}>Get in touch</h2>
+        <h2>Get in touch</h2>
         <p className={styles.contactBlurb}>
           Always happy to talk about research, side projects, or anything in
           between. Reach out any time.

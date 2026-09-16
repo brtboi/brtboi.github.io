@@ -1,13 +1,21 @@
-.hero {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 2rem 1.75rem;
-  position: relative;
-  max-width: 760px;
-  margin: 0 auto;
+.introDiv {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+
+  .introInner {
+    grid-row: 2;
+  }
+
+  .introArrow {
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .heroInner {
