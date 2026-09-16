@@ -15,39 +15,74 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+
+    padding-bottom: 1rem;
+
+    .introArrowLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      color: var(--text-muted);
+      opacity: 0.5;
+      transition: opacity 0.4s ease, transform 0.4s ease, color 0.25s ease;
+
+      svg {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      &:hover {
+        opacity: 1;
+        color: var(--text);
+        transform: translateY(4px);
+      }
+    }
+
+    // fades out as soon as the page is scrolled at all
+    .introArrowHidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+    }
   }
 }
 
-.heroInner {
+.introInner {
   max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .hi {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    font-size: 1.25rem;
+  }
+
+  .name {
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 }
 
-.heroKicker {
-  font-family: var(--font-body);
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin: 0 0 0.5rem;
-}
 
-.heroName {
-  font-size: clamp(3rem, 9vw, 5.5rem);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-}
-
-.heroTagline {
-  font-family: var(--font-body);
-  color: var(--text-muted);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  line-height: 1.6;
-  max-width: 34rem;
-  margin: 1.5rem 0 2.25rem;
-}
 
 .heroLinks {
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 .pill {
@@ -55,14 +90,27 @@
   font-size: 0.85rem;
   text-decoration: none;
   color: var(--text);
-  border: 1px solid var(--line);
-  padding: 0.55rem 1.05rem;
+  border: 2px solid var(--line);
+  padding: 0.5rem 1rem;
   border-radius: 999px;
-  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  transition: border-color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 
   &:hover {
     border-color: var(--accent);
-    transform: translateY(-2px);
+  }
+}
+
+.pillIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
   }
 }
 
@@ -70,30 +118,9 @@
   background: var(--accent);
   border-color: var(--accent);
   color: #fbf7f2;
-}
 
-.scrollHint {
-  position: absolute;
-  bottom: 2.2rem;
-  left: 1.75rem;
-  width: 22px;
-  height: 34px;
-  border: 1.5px solid var(--line);
-  border-radius: 999px;
-  display: flex;
-  justify-content: center;
-  padding-top: 6px;
-
-  span {
-    width: 4px;
-    height: 8px;
-    border-radius: 999px;
-    background: var(--text-muted);
-    animation: scrollBob 1.8s ease-in-out infinite;
+  &:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark)
   }
-}
-
-@keyframes scrollBob {
-  0%, 100% { transform: translateY(0); opacity: 1; }
-  50% { transform: translateY(8px); opacity: 0.4; }
 }

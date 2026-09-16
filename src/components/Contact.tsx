@@ -1,5 +1,6 @@
 import { contact } from '../content'
 import Reveal from './Reveal'
+import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 // import shared from '../styles/shared.module.scss'
 import styles from './Contact.module.scss'
 
@@ -16,11 +17,23 @@ export default function Contact() {
           {contact.email}
         </a>
         <div className={styles.contactLinks}>
-          <a href={contact.github} target="_blank" rel="noreferrer">
-            GitHub
+          <a
+            href={contact.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub profile"
+            title="GitHub"
+          >
+            <FaGithub />
           </a>
-          <a href={contact.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn profile"
+            title="LinkedIn"
+          >
+            <FaLinkedin />
           </a>
           <a href={contact.resumeHref} target="_blank" rel="noreferrer">
             Resume
