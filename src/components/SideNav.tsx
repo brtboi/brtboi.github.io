@@ -10,19 +10,36 @@ export default function SideNav() {
     const sections = navSections
       .map((s) => document.getElementById(s.id))
       .filter((el): el is HTMLElement => el !== null)
+    const lastId = sections[sections.length - 1]?.id
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-        if (visible) setActive(visible.target.id)
-      },
-      { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] },
-    )
+    const updateActive = () => {
+      // active section = the last one (in document order) whose top has
+      // scrolled up past the marker line
+      const marker = window.innerHeight * 0.4
+      let current = sections[0]?.id
+      for (const el of sections) {
+        if (el.getBoundingClientRect().top <= marker) {
+          current = el.id
+        }
+      }
 
-    sections.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+      // a short trailing section rests below the marker even at max scroll,
+      // so it can never win the check above — treat hitting the bottom of the
+      // page as being on the last section
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+      if (atBottom && lastId) current = lastId
+
+      if (current) setActive(current)
+    }
+
+    updateActive()
+    window.addEventListener('scroll', updateActive, { passive: true })
+    window.addEventListener('resize', updateActive)
+    return () => {
+      window.removeEventListener('scroll', updateActive)
+      window.removeEventListener('resize', updateActive)
+    }
   }, [])
 
   return (

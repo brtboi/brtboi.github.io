@@ -5,7 +5,7 @@ type TimelineEntry = {
   period: string
   title: string
   org: string
-  description: string
+  description: string[] | string
   tags: string[]
 }
 
@@ -20,11 +20,10 @@ export default function Timeline({
 }) {
   return (
     <section id={id}>
+      <ol className={styles.timeline}>
       <Reveal>
         <h2>{title}</h2>
       </Reveal>
-
-      <ol className={styles.timeline}>
         {items.map((item, i) => (
           <li key={item.title}>
             <Reveal delay={(i % 2) * 60}>
