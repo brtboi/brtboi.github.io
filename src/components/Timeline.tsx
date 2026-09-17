@@ -4,11 +4,11 @@ import Reveal from './Reveal'
 import styles from './Timeline.module.scss'
 
 export type TimelineEntry = {
-  overline: string
-  title: string
+  overline: ReactNode
+  title: ReactNode
   subtitle: ReactNode
   description: ReactNode
-  tags: string[]
+  tags: ReactNode[]
 }
 
 export default function Timeline({
@@ -29,19 +29,19 @@ export default function Timeline({
         <h2>{title}</h2>
       </Reveal>
         {items.map((item, i) => (
-          <li key={item.title}>
+          <li key={i}>
             <Reveal delay={(i % 2) * 60}>
               <div
                 className={clsx(styles.timelineRow, !showImages && styles.timelineRowTextOnly)}
               >
                 <div>
-                  <p className={styles.timelineOverline}>{item.overline}</p>
+                  <div className={styles.timelineOverline}>{item.overline}</div>
                   <h3 className={styles.timelineTitle}>{item.title}</h3>
                   <div className={styles.timelineSubtitle}>{item.subtitle}</div>
                   <div className={styles.timelineDesc}>{item.description}</div>
                   <ul className={styles.timelineTags}>
-                    {item.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
+                    {item.tags.map((tag, j) => (
+                      <li key={j}>{tag}</li>
                     ))}
                   </ul>
                 </div>

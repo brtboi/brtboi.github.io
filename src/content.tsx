@@ -108,7 +108,7 @@ export const projects: TimelineEntry[] = [
   },
   {
     overline: 'Personal Project',
-    title: 'White Pass Ski Patrol Scheduler',
+    title: (<ExternalLink href="https://whitepass-patrol-dev.web.app">Whitepass Ski Patrol Scheduler</ExternalLink>),
     subtitle: 'React · Material UI · Firebase',
     description:
       'Deployed a scheduling platform for 200+ users, with event-driven Cloud Functions maintaining denormalized aggregates to cut Firestore reads and cost. Refined the product through user interviews and usability testing.',
@@ -116,7 +116,7 @@ export const projects: TimelineEntry[] = [
   },
   {
     overline: 'Personal Project',
-    title: 'Tractor — Multiplayer Card Game',
+    title: 'Multiplayer Tractor Card Game Platform',
     subtitle: 'React · SCSS · Express.js · Socket.io',
     description:
       'Built a full-stack, real-time implementation of the Tractor card game, with a WebSocket-based client-server architecture synchronizing game state across multiple connected players.',
