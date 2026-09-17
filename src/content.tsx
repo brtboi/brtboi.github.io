@@ -1,4 +1,5 @@
 import { Detail, Details } from './components/Description'
+import ExternalLink from './components/ExternalLink'
 import type { TimelineEntry } from './components/Timeline'
 
 export const contact = {
@@ -58,7 +59,12 @@ export const experience: TimelineEntry[] = [
   {
     overline: 'May 2026 - Present',
     title: 'AI Researcher',
-    subtitle: 'Qernelzoo & Batista Lab',
+    subtitle: (
+      <>
+        <ExternalLink href="https://qernelzoo.com">Qernelzoo</ExternalLink> &{' '}
+        <ExternalLink href="https://batistalab.com/">Batista Lab</ExternalLink>
+      </>
+    ),
     description:
       'Built an agent harness and prompted open-source LLMs to autonomously calculate environment-dependent pseudopotentials for novel materials. Added retrieval-augmented tooling over crystallography databases and technical docs, cutting factual hallucinations by 94%, and ran large-scale jobs on the NERSC Perlmutter supercomputer.',
     tags: ['Hugging Face Transformers', 'RAG', 'SLURM'],
@@ -66,7 +72,9 @@ export const experience: TimelineEntry[] = [
   {
     overline: 'Sep 2025 - Present',
     title: 'Full-Stack Developer',
-    subtitle: 'Yale Computer Society — CourseTable',
+    subtitle: (<>
+      <ExternalLink href="https://yalecomputersociety.org/">Yale Computer Society</ExternalLink> — <ExternalLink href="https://coursetable.com">CourseTable</ExternalLink>
+    </>),
     description:
       'Built new data-ingestion workflows to scrape, parse, and normalize course data from university sites into PostgreSQL. Parallelized async scraping requests to cut runtime by 80%, and shipped UI improvements for 6,000+ students based on feedback.',
     tags: ['PostgreSQL', 'Async', 'Web Scraping'],
