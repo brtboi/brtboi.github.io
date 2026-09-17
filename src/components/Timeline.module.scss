@@ -46,7 +46,7 @@
   }
 }
 
-.timelinePeriod {
+.timelineOverline {
   font-family: var(--font-body);
   color: var(--accent);
   font-size: 0.78rem;
@@ -60,11 +60,15 @@
   margin-bottom: 0.2rem;
 }
 
-.timelineOrg {
+.timelineSubtitle {
   font-family: var(--font-body);
   color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0 0 0.7rem;
+
+  p {
+    margin: 0;
+  }
 }
 
 .timelineDesc {
@@ -73,6 +77,10 @@
   line-height: 1.65;
   color: var(--text);
   margin: 0 0 0.9rem;
+
+  p {
+    margin: 0;
+  }
 }
 
 .timelineTags {

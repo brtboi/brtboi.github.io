@@ -1,12 +1,13 @@
+import type { ReactNode } from 'react'
 import clsx from 'clsx'
 import Reveal from './Reveal'
 import styles from './Timeline.module.scss'
 
-type TimelineEntry = {
-  period: string
+export type TimelineEntry = {
+  overline: string
   title: string
-  org: string
-  description: string[] | string
+  subtitle: ReactNode
+  description: ReactNode
   tags: string[]
 }
 
@@ -34,10 +35,10 @@ export default function Timeline({
                 className={clsx(styles.timelineRow, !showImages && styles.timelineRowTextOnly)}
               >
                 <div>
-                  <p className={styles.timelinePeriod}>{item.period}</p>
+                  <p className={styles.timelineOverline}>{item.overline}</p>
                   <h3 className={styles.timelineTitle}>{item.title}</h3>
-                  <p className={styles.timelineOrg}>{item.org}</p>
-                  <p className={styles.timelineDesc}>{item.description}</p>
+                  <div className={styles.timelineSubtitle}>{item.subtitle}</div>
+                  <div className={styles.timelineDesc}>{item.description}</div>
                   <ul className={styles.timelineTags}>
                     {item.tags.map((tag) => (
                       <li key={tag}>{tag}</li>
