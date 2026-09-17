@@ -18,6 +18,11 @@
 
     padding-bottom: 1rem;
 
+    // clear the fixed bottom nav bar
+    @media (max-width: 640px) {
+      padding-bottom: 4.5rem;
+    }
+
     .introArrowLink {
       display: flex;
       align-items: center;

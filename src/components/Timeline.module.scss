@@ -10,13 +10,18 @@
 
 .timelineRow {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 1fr 260px;
   gap: 1.75rem;
   align-items: start;
 
-  @media (max-width: 560px) {
+  @media (max-width: 720px) {
     grid-template-columns: 1fr;
   }
+}
+
+// rows rendered without an image placeholder
+.timelineRowTextOnly {
+  grid-template-columns: 1fr;
 }
 
 .timelineImage {
@@ -36,7 +41,7 @@
     text-transform: uppercase;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 720px) {
     aspect-ratio: 16 / 9;
   }
 }

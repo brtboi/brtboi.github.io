@@ -1,14 +1,19 @@
 .bigDiv {
-    width: 100vw;
-    
+    width: 100%;
+
     .main {
         margin: 0 auto;
-        width: 800px;
+        width: var(--content-width);
 
         display: flex;
         flex-direction: column;
-        align-items: left;
+        // stretch, so each section fills the column and can center its own
+        // contents against it — flex-start shrinks them to fit-content
+        align-items: stretch;
 
+        // clear the fixed bottom nav bar
+        @media (max-width: 640px) {
+            padding-bottom: 5rem;
+        }
     }
-    
 }

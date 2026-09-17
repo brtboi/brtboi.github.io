@@ -10,7 +10,26 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color-scheme: light;
 
-  --side-nav-width: 25vw;
+  // layout: the content column and the blank gutters either side of it.
+  // the nav lives in the left gutter, so both derive from the same numbers.
+  --content-width: 800px;
+  --gutter: calc((100vw - var(--content-width)) / 2);
+}
+
+// gutters have shrunk as far as they usefully can, so the content column
+// starts giving up width instead (7rem = a 56px gutter on each side)
+@media (max-width: 1200px) {
+  :root {
+    --content-width: min(800px, calc(100vw - 7rem));
+  }
+}
+
+// nav moves out of the gutter and down to the bottom of the screen,
+// so the content can use the full width
+@media (max-width: 640px) {
+  :root {
+    --content-width: calc(100vw - 2.5rem);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
