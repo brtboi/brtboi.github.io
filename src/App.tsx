@@ -11,7 +11,7 @@ function App() {
       <SideNav />
       <main className={styles.main}>
         <Intro />
-        <Timeline id="education" title="Education" items={education} showImages={false} />
+        <Timeline id="education" title="Education" items={education} />
         <Timeline id="experience" title="Experience" items={experience} />
         <Timeline id="projects" title="Projects" items={projects} />
         <Contact />

@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import clsx from 'clsx'
 import Reveal from './Reveal'
 import styles from './Timeline.module.scss'
 
@@ -15,12 +14,10 @@ export default function Timeline({
   id,
   title,
   items,
-  showImages = true,
 }: {
   id: string
   title: string
   items: TimelineEntry[]
-  showImages?: boolean
 }) {
   return (
     <section id={id}>
@@ -31,9 +28,7 @@ export default function Timeline({
         {items.map((item, i) => (
           <li key={i}>
             <Reveal delay={(i % 2) * 60}>
-              <div
-                className={clsx(styles.timelineRow, !showImages && styles.timelineRowTextOnly)}
-              >
+              <div className={styles.timelineRow}>
                 <div>
                   <div className={styles.timelineOverline}>{item.overline}</div>
                   <h3 className={styles.timelineTitle}>{item.title}</h3>
@@ -45,11 +40,6 @@ export default function Timeline({
                     ))}
                   </ul>
                 </div>
-                {showImages && (
-                  <div className={styles.timelineImage} aria-hidden="true">
-                    <span>Image</span>
-                  </div>
-                )}
               </div>
             </Reveal>
           </li>

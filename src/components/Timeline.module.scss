@@ -10,40 +10,9 @@
 
 .timelineRow {
   display: grid;
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: 1fr;
   gap: 1.75rem;
   align-items: start;
-
-  @media (max-width: 720px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-// rows rendered without an image placeholder
-.timelineRowTextOnly {
-  grid-template-columns: 1fr;
-}
-
-.timelineImage {
-  aspect-ratio: 4 / 3;
-  border-radius: 14px;
-  background: var(--bg-alt);
-  border: 1px dashed var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  span {
-    font-family: var(--font-body);
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 720px) {
-    aspect-ratio: 16 / 9;
-  }
 }
 
 .timelineOverline {
