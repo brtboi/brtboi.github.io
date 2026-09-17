@@ -68,6 +68,7 @@ export const experience: TimelineEntry[] = [
     description:
       'Built an agent harness and prompted open-source LLMs to autonomously calculate environment-dependent pseudopotentials for novel materials. Added retrieval-augmented tooling over crystallography databases and technical docs, cutting factual hallucinations by 94%, and ran large-scale jobs on the NERSC Perlmutter supercomputer.',
     tags: ['Hugging Face Transformers', 'RAG', 'SLURM'],
+    // image: { src: '/images/qernelzoo.png', alt: '' },
   },
   {
     overline: 'Sep 2025 - Present',
@@ -78,6 +79,7 @@ export const experience: TimelineEntry[] = [
     description:
       'Built new data-ingestion workflows to scrape, parse, and normalize course data from university sites into PostgreSQL. Parallelized async scraping requests to cut runtime by 80%, and shipped UI improvements for 6,000+ students based on feedback.',
     tags: ['PostgreSQL', 'Async', 'Web Scraping'],
+    // image: { src: '/images/coursetable.png', alt: '' },
   },
   {
     overline: 'Sep 2025 - Present',
@@ -86,6 +88,7 @@ export const experience: TimelineEntry[] = [
     description:
       'Wrote control software for an RC turbojet plane, integrating real-time telemetry with pilot input, and modified open-source ECU firmware to support custom engine hardware.',
     tags: ['Embedded Systems', 'Telemetry'],
+    // image: { src: '/images/jet-team.png', alt: '' },
   },
   {
     overline: 'May 2024 - Sep 2024',
@@ -94,6 +97,7 @@ export const experience: TimelineEntry[] = [
     description:
       'Developed physics-informed neural networks for heat transfer simulation, tuning loss functions and hyperparameters to drop convergence time by 56%. Engineered preprocessing pipelines to filter noisy measurements and stabilize training.',
     tags: ['TensorFlow', 'PINNs'],
+    // image: { src: '/images/pinns.png', alt: '' },
   },
 ]
 
@@ -105,6 +109,7 @@ export const projects: TimelineEntry[] = [
     description:
       'Automated market-data retrieval across thousands of equities via the TradeStation REST API, handling authentication, JSON parsing, and rate limits. Built a configurable backtesting engine over 10+ years of historical data for strategy evaluation.',
     tags: ['Python', 'Pandas'],
+    // image: { src: '/images/stock-screener.png', alt: '' },
   },
   {
     overline: 'Personal Project',
@@ -113,6 +118,7 @@ export const projects: TimelineEntry[] = [
     description:
       'Deployed a scheduling platform for 200+ users, with event-driven Cloud Functions maintaining denormalized aggregates to cut Firestore reads and cost. Refined the product through user interviews and usability testing.',
     tags: ['React', 'Firebase'],
+    // image: { src: '/images/whitepass.png', alt: '' },
   },
   {
     overline: 'Personal Project',
@@ -121,6 +127,7 @@ export const projects: TimelineEntry[] = [
     description:
       'Built a full-stack, real-time implementation of the Tractor card game, with a WebSocket-based client-server architecture synchronizing game state across multiple connected players.',
     tags: ['WebSockets', 'Real-time'],
+    // image: { src: '/images/tractor.png', alt: '' },
   },
 ]
 

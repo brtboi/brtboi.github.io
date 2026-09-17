@@ -15,6 +15,26 @@
   align-items: start;
 }
 
+.timelineRowWithImage {
+  grid-template-columns: 1fr 260px;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timelineImage {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+
+  @media (max-width: 720px) {
+    aspect-ratio: 16 / 9;
+  }
+}
+
 .timelineOverline {
   font-family: var(--font-body);
   color: var(--accent);
